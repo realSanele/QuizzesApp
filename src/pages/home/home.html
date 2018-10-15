@@ -1,14 +1,369 @@
-<ion-header>
+<ion-header class="header">
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Sport Quizzes
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding class="main">
+  
+
+  <div>
+    <div *ngIf = "category == 1">
+      <h2>Category : Soccer</h2>
+      <div class="question_no">
+        <p>Question {{question}} of {{maxQuestion}}</p>
+      </div>
+      <div *ngIf = "question == 1">
+        <h4>which country has won the most fifa world cups?</h4>
+        <ion-list radio-group [(ngModel)]="relationship">
+          <ion-item>
+            <ion-label>Germany</ion-label>
+            <ion-radio value="Germany" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Argebtina</ion-label>
+            <ion-radio value="Argebtina" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Brazil</ion-label>
+            <ion-radio value="Brazil" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Italy</ion-label>
+            <ion-radio value="Italy" checked></ion-radio>
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <div *ngIf = "question == 2">
+        <h4>When was the first FIFA men's world cup?</h4>
+        <ion-list radio-group [(ngModel)]="year">
+          <ion-item>
+            <ion-label>1998</ion-label>
+            <ion-radio value="1998" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>2002</ion-label>
+            <ion-radio value="2002" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>1938</ion-label>
+            <ion-radio value="1938" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>1930</ion-label>
+            <ion-radio value="1930" checked></ion-radio>
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <div *ngIf = "question == 3">
+        <h4>How may countries were competing in the women's first world cup?</h4>
+        <ion-list radio-group [(ngModel)]="num_nations">
+          <ion-item>
+            <ion-label>24</ion-label>
+            <ion-radio value="24" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>12</ion-label>
+            <ion-radio value="12" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>48</ion-label>
+            <ion-radio value="48" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>16</ion-label>
+            <ion-radio value="16" checked></ion-radio>
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <div *ngIf = "question == 4">
+        <h4>Which country won the first women world cup?</h4>
+        <ion-list radio-group [(ngModel)]="women_first_won">
+          <ion-item>
+            <ion-label>Brazil</ion-label>
+            <ion-radio value="Brazil" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>USA</ion-label>
+            <ion-radio value="USA" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Norway</ion-label>
+            <ion-radio value="Norway" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Sweden</ion-label>
+            <ion-radio value="Sweden" checked></ion-radio>
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <div *ngIf = "question == 5">
+        <h4>Who holds the record for most goals scored in a single World Cup?</h4>
+        <ion-list radio-group [(ngModel)]="most_goal_record">
+          <ion-item>
+            <ion-label>Sandor Kocsis (Hungary)</ion-label>
+            <ion-radio value="Sandor Kocsis" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Just Fontaine (France)</ion-label>
+            <ion-radio value="Just Fontaine" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Gerd Muller (West Germany)</ion-label>
+            <ion-radio value="Gerd Muller" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Ferreira Eusebio (Portugal)</ion-label>
+            <ion-radio value="Ferreira Eusebio" checked></ion-radio>
+          </ion-item>
+        </ion-list>
+      </div>
+      <div class="bNext">
+        <button ion-button (click)="next()">Next</button>
+      </div>
+    </div>
+
+    <div *ngIf = "category == 2">
+      <h2>Category : Rugby</h2>
+      <div class="question_no">
+        <p>Question {{question}} of {{maxQuestion}}</p>
+      </div>
+      <div *ngIf = "question == 6">
+        <h4>Which year was rugby first world cup held?</h4>
+        <ion-list radio-group [(ngModel)]="rugby_first_wCup">
+          <ion-item>
+            <ion-label>1983</ion-label>
+            <ion-radio value="Sandor Kocsis" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>1985</ion-label>
+            <ion-radio value="1985" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>1987</ion-label>
+            <ion-radio value="1987" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>1991</ion-label>
+            <ion-radio value="1991" checked></ion-radio>
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <div *ngIf = "question == 7">
+        <h4>True or False. Rugby first World cup was hosted by Two countries</h4>
+        <ion-list radio-group [(ngModel)]="two_countries">
+          <ion-item>
+            <ion-label>False</ion-label>
+            <ion-radio value="False" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>True</ion-label>
+            <ion-radio value="True" checked></ion-radio>
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <div *ngIf = "question == 8">
+        <h4>Which year did South Africa won their first rugby world cup?</h4>
+        <ion-list radio-group [(ngModel)]="saFirstWon">
+          <ion-item>
+            <ion-label>2007</ion-label>
+            <ion-radio value="2007" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>1995</ion-label>
+            <ion-radio value="1995" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>1987</ion-label>
+            <ion-radio value="1987" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>1991</ion-label>
+            <ion-radio value="1991" checked></ion-radio>
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <div *ngIf = "question == 9">
+        <h4>Which African country hosted rugby world cup in 1995?</h4>
+        <ion-list radio-group [(ngModel)]="africanHost">
+          <ion-item>
+            <ion-label>Egypt</ion-label>
+            <ion-radio value="Egypt" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Morocco</ion-label>
+            <ion-radio value="Morocco" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Zimbabwe</ion-label>
+            <ion-radio value="Zimbabwe" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>South Africa</ion-label>
+            <ion-radio value="South Africa" checked></ion-radio>
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <div *ngIf = "question == 10">
+        <h4>Which country has won most rugby world cups?</h4>
+        <ion-list radio-group [(ngModel)]="rugbyBestWon">
+          <ion-item>
+            <ion-label>England</ion-label>
+            <ion-radio value="England" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>New Zealand</ion-label>
+            <ion-radio value="New Zealand" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Australia</ion-label>
+            <ion-radio value="Australia" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>South Africa</ion-label>
+            <ion-radio value="South Africa" ></ion-radio>
+          </ion-item>
+        </ion-list>
+      </div>
+      <div class="bNext">
+        <button ion-button (click)="next()">Next</button>
+      </div>
+    </div>
+
+    <div *ngIf = "category == 3">
+      <h2>Category : Cricket</h2>
+      <div class="question_no">
+        <p>Question {{question}} of {{maxQuestion}}</p>
+      </div>
+      <div *ngIf = "question == 11">
+        <h4>2019 cricket World cup will be hosted by England and Wales</h4>
+        <ion-list radio-group [(ngModel)]="cricketHost2019">
+          <ion-item>
+            <ion-label>True</ion-label>
+            <ion-radio value="True" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>False</ion-label>
+            <ion-radio value="False" checked></ion-radio>
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <div *ngIf = "question == 12">
+        <h4>How many players a cricket teams have in one game?</h4>
+        <ion-list radio-group [(ngModel)]="cricketPlayers">
+          <ion-item>
+            <ion-label>Two(2)</ion-label>
+            <ion-radio value="Two" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Eleven (11)</ion-label>
+            <ion-radio value="Eleven" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Ten (10)</ion-label>
+            <ion-radio value="Ten" checked></ion-radio>
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <div *ngIf = "question == 13">
+        <h4>Person who has the authority to make decisions about events on the cricket field is known as?</h4>
+        <ion-list radio-group [(ngModel)]="decisionsMaker">
+          <ion-item>
+            <ion-label>Referee</ion-label>
+            <ion-radio value="Referee" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Judge</ion-label>
+            <ion-radio value="Eleven" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Match official</ion-label>
+            <ion-radio value="Match official" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Umpire</ion-label>
+            <ion-radio value="Umpire" checked></ion-radio>
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <div *ngIf = "question == 14">
+        <h4>Which year did South Africa, Zimbabwe and Kenya host the cricket world cup?</h4>
+        <ion-list radio-group [(ngModel)]="saAndZim">
+          <ion-item>
+            <ion-label>2003</ion-label>
+            <ion-radio value="2003" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>1999</ion-label>
+            <ion-radio value="1999" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>2007</ion-label>
+            <ion-radio value="2007" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>2000</ion-label>
+            <ion-radio value="2000" checked></ion-radio>
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <div *ngIf = "question == 15">
+        <h4>How many innings does a Criket Test match have (Per team)?</h4>
+        <ion-list radio-group [(ngModel)]="num_innings">
+          <ion-item>
+            <ion-label>One (1)</ion-label>
+            <ion-radio value="One" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Two (2)</ion-label>
+            <ion-radio value="Two" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Three (3)</ion-label>
+            <ion-radio value="Three" checked></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Four (4)</ion-label>
+            <ion-radio value="Four" checked></ion-radio>
+          </ion-item>
+        </ion-list>
+      </div>
+      <div class="bNext">
+        <button ion-button (click)="next()">Next</button>
+      </div>
+    </div>
+    
+
+    <div *ngIf = "category == 4">
+        <h4 class="answers">Correct answers</h4>
+
+      <div class="output" *ngFor="let answer of answersList">
+        <p><b>
+        {{answer}}<br>
+   
+        </b></p>
+      </div>
+      <h5 class="answers">Your Score : {{userTotal}}</h5>
+
+      <div class="bStartAgn">
+        <button ion-button (click)="startAgain()">Start Again</button>
+      </div>
+    </div>
+  </div>
+
+  
 </ion-content>

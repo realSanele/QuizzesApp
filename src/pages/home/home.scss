@@ -1,3 +1,60 @@
 page-home {
+    .main{
+        background-color: antiquewhite;
+    }
 
+    ion-title{
+        background-color: maroon;
+    }
+    
+    /*ion-content{
+        //background-image: url("../../assets/imgs/IQ2.jpg");
+        
+        background-size: cover;
+        background-repeat: no-repeat;
+    }*/
+
+    .output p b{
+        font-size: 20px;
+    }
+
+    .question_no p{
+        color: maroon;
+        text-align: right;
+    }
+
+    h2{
+        text-align: center;
+        color: maroon;
+    }
+
+    .answers{
+        text-align: center;
+        color: maroon;
+        font-size: 20px;
+    }
+    
+    .bNext{
+        width: 100%;
+        bottom: 20%;
+        position: fixed;
+        text-align: center;
+
+        button{
+            color: black;
+            background-color: grey;
+        }
+    }
+
+    .bStartAgn{
+        width: 100%;
+        bottom: 5%;
+        position: fixed;
+        text-align: center;
+        
+        button{
+            color: black;
+            background-color: grey;
+        }
+    }
 }
